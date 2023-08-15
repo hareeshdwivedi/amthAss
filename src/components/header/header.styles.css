@@ -1,0 +1,115 @@
+.nav-bar {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  padding: 2rem 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 0 4.5rem rgba(0, 0, 0, 0.09); */
+}
+/* .btn-back {
+  width: 2rem;
+  height: 2rem;
+  color: #444;
+} */
+.logo-name {
+  justify-self: center;
+  font-size: 2.6rem;
+  /* font-size: 1.7rem; */
+  font-weight: 500;
+  color: #4d5272;
+  /* letter-spacing: 0.07rem; */
+}
+.btn-three-dots {
+  justify-self: end;
+  z-index: 9999999;
+  cursor: pointer;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.2rem);
+  z-index: 2;
+  /* opacity: 0; */
+}
+.fade-in {
+  animation: fadeIn 1s forwards ease-in-out;
+}
+
+.mobile-nav {
+  position: absolute;
+
+  border-radius: 1rem;
+  max-width: 18.94rem;
+  min-width: 10rem;
+  background-color: #e5e5e5;
+  /* padding: 0.2rem 0 0.2rem 1rem; */
+  padding: 0 0 0 1.6rem;
+  z-index: 9999999;
+  opacity: 0;
+  /* min-width: 15%; */
+
+  /* transform: translateX(85%); */
+  /* transform: translateY(-10%); */
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.fade-in-left {
+  animation: slideInFromLeft 3s forwards ease-in-out;
+}
+.mobile-list {
+  /* padding: 1rem 1rem; */
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #4d5272;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.hc-border-bottom {
+  border-bottom: 0.13rem solid #aeb8c4;
+  padding: 1.2rem;
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr;
+  cursor: pointer;
+}
+.lists {
+  grid-column: 1 / 2;
+}
+.hc-border-bottom:last-child {
+  border: none;
+  color: #ee225d;
+}
+/* nav animation */
+@keyframes slideInFromLeft {
+  /* from {
+    transform: translateX(-4%);
+
+    opacity: 0;
+  } */
+  to {
+    transform: translateX(85%);
+    /* transform: translateX(85%) translateY(-10%); */
+
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

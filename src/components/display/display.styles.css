@@ -1,0 +1,149 @@
+.card-container {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  box-shadow: 0 0 4.5rem rgba(0, 0, 0, 0.09);
+  border-radius: 1rem;
+  padding: 2rem 2rem;
+  align-items: center;
+  justify-content: center;
+  /* row-gap: 1.5rem; */
+  margin-bottom: 1.9rem;
+  background-color: #fff;
+
+  transition: margin-bottom 0.4s ease-in-out;
+  transition: margin-top 0.4s ease-in-out;
+}
+.btc {
+  display: flex;
+
+  align-items: center;
+  gap: 2rem;
+}
+.coin-bitcoin {
+  font-weight: 500;
+  font-size: 1.284rem;
+  color: #4d5272;
+}
+.coin-name {
+  justify-self: end;
+  grid-column: 3;
+  font-weight: 500;
+  color: #96a4be;
+  font-size: 1.284rem;
+}
+.coin-amount {
+  font-size: 3rem;
+  grid-row: 2;
+  grid-column: 1/-1;
+  font-weight: 600;
+  color: #4d5272;
+  padding-top: 1rem;
+}
+.coin-in-usd {
+  grid-row: 3;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #96a4be;
+  grid-column: 1/3;
+}
+.value-rate {
+  grid-row: 3;
+  grid-column: 3;
+  width: min-content;
+  border-radius: 2rem;
+  justify-self: end;
+  border: none;
+  padding: 0.47rem 1rem;
+  background-color: #ee225d;
+  font-size: 1.284rem;
+
+  color: #ffffff;
+}
+.arrow-down {
+  grid-row: 4;
+  grid-column: 1/4;
+  /* display: flex; */
+
+  /* align-items: stretch; */
+  justify-self: center;
+  align-self: center;
+
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  padding: 1rem 0;
+  color: "#96a4be";
+
+  display: block;
+}
+.drop-down-list {
+  max-height: 0rem;
+  overflow: hidden;
+  /* transition: max-height 1.3s ease-out; */
+}
+
+.show-list {
+  width: 85%;
+  margin: 0 auto;
+
+  background-color: #ffffff60;
+  padding: 0.6rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.09);
+  margin-top: -1.9rem;
+
+  z-index: 1;
+  font-size: 1.2rem;
+  list-style: none;
+  /* opacity: 1; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  letter-spacing: 0.04rem;
+  color: #4d5272;
+
+  max-height: 20rem;
+}
+.slide-down {
+  animation: slideDropdown 2s forwards ease-in-out;
+}
+.slide-up {
+  animation: slideUp 2s forwards ease-in-out;
+}
+@keyframes slideDropdown {
+  from {
+    max-height: 0;
+    opacity: 0;
+    /* transform: ; */
+  }
+  to {
+    max-height: 20rem;
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from {
+    /* transform:translateY(100%); */
+    max-height: 20rem;
+    opacity: 1;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+.alt-coin {
+  display: grid;
+  grid-template-columns: 1fr 12fr 4fr;
+  gap: 1rem;
+  padding: 0 1.2rem 0 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+.grid-coin {
+  justify-self: end;
+  letter-spacing: 0.003rem;
+  font-size: 1.2rem;
+}
